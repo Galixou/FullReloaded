@@ -53,22 +53,22 @@ Lorsque le joueur décide de retourner au menu puis de refaire une partie il se 
 
 Pour le moment je me suis contenté de ça en guise de démo technique mais je verrais bien des améliorations eventuelles (tout dépendra de ma motivation), voici ma roadmap:
 
-1. **Extension du niveau**
+- [ ] 1. **Extension du niveau**
 Le niveau est unique un carré entouré de mur en brique rouge avec une croix rouge en guise de respawn ainsi qu'une structure pour testé la fonction d'accroupissement. Je pense qu'une extension ne fera pas de mal avec + de structure pour embellir le décor.
 
-2. **Accentuation du fond de jeu**
+- [ ] 2. **Accentuation du fond de jeu**
 Je me suis contenté de la base, c'est-à-dire le fond bleu et l'éclairage de base mais peut-être qu'un meilleur fond et un meilleur éclairage pourrait amennée du "réalisme" (j'avais un autre mot mais je l'es oublié).
 
-3. **Ajout d'armes**
+- [ ] 3. **Ajout d'armes**
 Pour le moment il n'y as qu'un couteau mais je compte ajouté un fusil avec son interface (affichage des munitions, effets spéciaux lorsqu'on tire et qu'on touche), ensuite avec cela un système pour passer d'une arme à une autre et eventuellement une fonction qui permettrerais de donné un coup de couteau lorsqu'on est équippé du fusil.
 
-4. **Meilleurs ennemies**
+- [ ] 4. **Meilleurs ennemies**
 Les ennemies pour le moment sont statiques et ne se déplacent pas, cependant je compte les faire déplacer et se diriger vers le joueur et ainsi nous attaqué, cela amennera une bar de vie pour le joueur en suppléments.
 
-5. **Réparations des différends bugs et eventuelle optimisations**
+- [ ] 5. **Réparations des différends bugs et eventuelle optimisations**
 Notamment le bug d'inversion de contrôles et celui du freeze.
 
-6. **Ajouts de paramètres et meilleurs Menu**
+- [x]  6. **Ajouts de paramètres et meilleurs Menu**
 Pour le moment les menus sont laids et basiques, je vais les embellir et ajoutés plus de paramètres, notamment une fonctions de respawn des ennemies puis des paramètres graghiques.
 
 ## Disclaimer
