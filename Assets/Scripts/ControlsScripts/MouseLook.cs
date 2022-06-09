@@ -11,13 +11,14 @@ public class MouseLook : MonoBehaviour
     public Vector2 rotation;
     private Vector2 currentLookRot;
     private Vector2 rotationV = new Vector2(0, 0);
-    public float lookSensitivity = 2;
-    public float lookSmoothDamp = 0.1f;
+    private float lookSensitivity = 7f;
+    private float lookSmoothDamp = 0.1f;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         player = transform.parent.gameObject;
     }
 
