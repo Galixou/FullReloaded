@@ -14,10 +14,13 @@ public class EnemyDamage : MonoBehaviour
     public GameObject healthBarUI;
     public Slider slider;
 
+    public Animator anim;
+
     private void Start()
     {
         health = maxHealth;
         slider.value = CalculateHealth();
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,6 +28,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.tag == "Melee")
         {
             Melee.Play();
+            anim.Play("EnemyHit");
             health -= scriptMelee.degats;
             healthBarUI.SetActive(true);
             slider.value = CalculateHealth();
