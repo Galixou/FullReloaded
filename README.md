@@ -45,8 +45,9 @@
    - Un son est émis lorsqu'on donne un coup et dès qu'il meurt
    - **Pour le moment la seul arme utilisable par le joueur pour tuer l'ennemi est un couteau**
 
-**BUG**
-Lorsque le joueur décide de retourner au menu puis de refaire une partie il se peut être retrouvé bloqué, il suffit d'appuyer sur échap et le gameplay continue.
+**(corrigé)**
+~~**BUG**
+Lorsque le joueur décide de retourner au menu puis de refaire une partie il se peut être retrouvé bloqué, il suffit d'appuyer sur échap et le gameplay continue.~~
 
 ## Futur fonction
 
