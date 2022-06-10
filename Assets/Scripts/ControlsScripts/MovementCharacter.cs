@@ -46,9 +46,13 @@ public class MovementCharacter : MonoBehaviour
 
         // Système de sprint
         if (isGrounded && Input.GetButtonDown("Run"))
-            speed += 5;
+        {
+            speed = 7f;
+        }
         else if (Input.GetButtonUp("Run"))
-            speed -= 5;
+        {
+            speed = 2f;
+        }
 
         // Système de réapparition
         if (rb.position.y <= -10)

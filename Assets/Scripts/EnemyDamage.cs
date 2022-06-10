@@ -8,10 +8,13 @@ public class EnemyDamage : MonoBehaviour
     private float health = 100f;
     private float maxHealth = 100f;
 
+    public int score = 100000;
+
     public AudioSource Death;
     public AudioSource Melee;
 
     public MeleeAttack scriptMelee;
+    public Gun         scriptGun;
 
     public GameObject healthBarUI;
     public Slider slider;
@@ -27,7 +30,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Melee")
+        if (other.tag == "Melee" && scriptMelee.anim.GetCurrentAnimatorStateInfo(0).IsTag("attack"))
         {
             Melee.Play();
             anim.Play("EnemyHit");
@@ -35,7 +38,7 @@ public class EnemyDamage : MonoBehaviour
 
             if(floatingTextPrefab && health > 0)
             {
-                ShowFloatingText();
+                ShowFloatingTextMelee();
             }
 
             healthBarUI.SetActive(true);
@@ -45,7 +48,28 @@ public class EnemyDamage : MonoBehaviour
             {
                 Death.Play();
                 Destroy(gameObject);
+                ScoreManager.instance.Addpoint(score);
             }
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+
+        if (floatingTextPrefab && health > 0)
+        {
+            ShowFloatingTextGun();
+        }
+
+        healthBarUI.SetActive(true);
+        slider.value = CalculateHealth();
+
+        if (health <= 0)
+        {
+            Death.Play();
+            Destroy(gameObject);
+            ScoreManager.instance.Addpoint(score);
         }
     }
 
@@ -54,9 +78,15 @@ public class EnemyDamage : MonoBehaviour
         return health / maxHealth;
     }
 
-    void ShowFloatingText()
+    void ShowFloatingTextMelee()
     {
         var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMeshPro>().text = "-" + Mathf.Round(scriptMelee.degats * 10f) * 0.1f + " PV";
+        go.GetComponent<TextMeshPro>().text = "-" + Mathf.Round(scriptMelee.degats * 10.0f) * 0.1f;
+    }
+
+    void ShowFloatingTextGun()
+    {
+        var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMeshPro>().text = "-" + Mathf.Round(scriptGun.damage * 10.0f) * 0.1f;
     }
 }
