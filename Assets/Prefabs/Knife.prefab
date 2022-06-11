@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5772047965653710806
+--- !u!1 &3361303172117308982
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8300979639673729776}
-  m_Layer: 6
+  - component: {fileID: 976385457023394576}
+  m_Layer: 8
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Melee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8300979639673729776
+--- !u!4 &976385457023394576
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5772047965653710806}
+  m_GameObject: {fileID: 3361303172117308982}
   m_LocalRotation: {x: 0.18781152, y: -0, z: -0, w: 0.9822051}
-  m_LocalPosition: {x: 0.293, y: -0.454, z: 0.79}
+  m_LocalPosition: {x: 0.665, y: -0.487, z: 0.741}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6213029414319438449}
+  - {fileID: 2920247029683465105}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 21.65, y: 0, z: 0}
---- !u!1001 &6212534897464048427
+--- !u!1001 &2920738242618976971
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 8300979639673729776}
+    m_TransformParent: {fileID: 976385457023394576}
     m_Modifications:
     - target: {fileID: 1634110288462620, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
       propertyPath: m_Name
       value: knive_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634110288462620, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634110288462620, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
+      propertyPath: m_TagString
+      value: Melee
       objectReference: {fileID: 0}
     - target: {fileID: 4018472159789402, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
       propertyPath: m_RootOrder
@@ -91,26 +99,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
---- !u!1 &6211191368061777975 stripped
+--- !u!4 &2920247029683465105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4018472159789402, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
+  m_PrefabInstance: {fileID: 2920738242618976971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2922068432934889943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1634110288462620, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
-  m_PrefabInstance: {fileID: 6212534897464048427}
+  m_PrefabInstance: {fileID: 2920738242618976971}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2718106492463356069
+--- !u!65 &6559342302417520965
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6211191368061777975}
+  m_GameObject: {fileID: 2922068432934889943}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.09345955, y: 1.4174385, z: 0.3694927}
-  m_Center: {x: 3.5277546e-17, y: 0.5034108, z: 0.004965113}
---- !u!4 &6213029414319438449 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4018472159789402, guid: ddc7fe1a97255b642b7ca3b01467ee69, type: 3}
-  m_PrefabInstance: {fileID: 6212534897464048427}
+  m_Size: {x: 0.09345955, y: 0.966282, z: 0.36143625}
+  m_Center: {x: -0.000000011563263, y: 0.7297955, z: 0.026901243}
+--- !u!95 &1949476578402819196
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2922068432934889943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbf6cdd3cec7ad449b153eccde216281, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1949476578402819171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2922068432934889943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa8758ef2154d847a9a6887c2de9606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1949476578402819196}
+  degats: 0

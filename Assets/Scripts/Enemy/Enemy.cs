@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
-public class EnemyDamage : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public GameObject floatingTextPrefab;
     private float health = 100f;
@@ -21,11 +22,48 @@ public class EnemyDamage : MonoBehaviour
 
     public Animator anim;
 
+    public float lookRadius = 3f;
+
+    Transform target;
+    NavMeshAgent agent;
+
     private void Start()
     {
         health = maxHealth;
         slider.value = CalculateHealth();
         anim = GetComponent<Animator>();
+
+        target = PlayerManager.instance.player.transform;
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Update()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= lookRadius)
+        {
+            agent.SetDestination(target.position);
+
+            if (distance <= agent.stoppingDistance)
+            {
+                //Attack the target
+                FaceTarget();
+            }
+        }
+    }
+
+    void FaceTarget()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,6 +94,7 @@ public class EnemyDamage : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        anim.Play("EnemyHit");
 
         if (floatingTextPrefab && health > 0)
         {
@@ -81,12 +120,12 @@ public class EnemyDamage : MonoBehaviour
     void ShowFloatingTextMelee()
     {
         var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMeshPro>().text = "-" + Mathf.Round(scriptMelee.degats * 10.0f) * 0.1f;
+        go.GetComponent<TextMeshPro>().text = "-" + scriptMelee.degats.ToString("F1");
     }
 
     void ShowFloatingTextGun()
     {
         var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMeshPro>().text = "-" + Mathf.Round(scriptGun.damage * 10.0f) * 0.1f;
+        go.GetComponent<TextMeshPro>().text = "-" + scriptGun.damage.ToString("F1");
     }
 }

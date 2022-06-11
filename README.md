@@ -10,22 +10,23 @@
    - Droite
    - Courir
    - S'accroupir
-   - **Les contrôles peuvent se retrouvé inverser pour X raison (bug à corriger)**
+   - **~~Les contrôles peuvent se retrouvé inverser pour X raison (bug à corriger)~~**
    - **Compatibilité AZERTY/QWERTY**
-   - **Saut et course simultanée possible mais limité**
-   - **Les contrôles sont affichés sur l'écran pendant que l'on joue**
+   - **~~Saut et course simultanée possible mais limité~~**
+   - **~~Les contrôles sont affichés sur l'écran pendant que l'on joue~~ Ils sont affichés dans la section "controls" du menu pause**
 
 2. **Réaparition au point de départ lors d'un accident de chut dans le vide (Respawn)**
 
 3. **Menu d'accueil et menu pause**
-   - Le menu d'accueil
+   - Le menu d'accueil:
      - Démarrer la jeu
      - Accéder aux paramètres du jeu
      - Quitter le jeu
-     - **Les paramètres ne propose que le changement du volume du jeu, il est enregistré donc pas besoin de le changer à chaque lancement**
+     - **~~Les paramètres ne propose que le changement du volume du jeu, il est enregistré donc pas besoin de le changer à chaque lancement~~ Maintenant on peut modifier la résolution, les graphismes (bas, moyen, élévée), choisir si l'on veut en plein écran ou pas, la barre de son à été "optimisé"**
 
    - Le menu pause:
      - Reprendre le jeu
+     - (V2) Contrôles
      - Accéder au menu
      - Quitter le jeu
 
@@ -39,11 +40,24 @@
 
 5. **Ennemies**
    - Les ennemies ont 100 PV (Point de Vie)
-   - les coups de l'arme blanche varie entre 1 et 20 point de dégats sur l'ennemies
+   - les coups de l'arme blanche varie entre 1 et 20 point de dégats sur l'ennemies, le nombre de dégâts est affichés au dessus de l'ennemi
    - Une bar de vie indique combien il reste de vie à l'ennemi.
    - Une fois qu'il atteind 0 PV ou moins il disparait
    - Un son est émis lorsqu'on donne un coup et dès qu'il meurt
-   - **Pour le moment la seul arme utilisable par le joueur pour tuer l'ennemi est un couteau**
+   - **~~Pour le moment la seul arme utilisable par le joueur pour tuer l'ennemi est un couteau~~**
+
+6. **(V2) Ajout d'un fusil**
+   - Il est automatique
+   - chaque tir ont:
+     - des dégats entre 1 et 10PV
+     - une portée entre 1 et 100
+     - une puissance de force entre 1 et 30
+   - Il peut contenir 30 munitions et se recharge automatiquement, une touche "R" est assignée au rechargement si l'on souhaite rechargé en plein milieu de chargeur.
+   - l'affichage des munitions actuelles est visible
+
+7. **(V2) Holster d'armes**
+   - Il peut contenir autant d'arme que l'on souhaite et il fonctionne avec la molette de la souris
+   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder au fusil directement.
 
 **(corrigé)**
 ~~**BUG**
@@ -59,13 +73,13 @@ Le niveau est unique un carré entouré de mur en brique rouge avec une croix ro
 - [ ] 2. **Accentuation du fond de jeu**
 Je me suis contenté de la base, c'est-à-dire le fond bleu et l'éclairage de base mais peut-être qu'un meilleur fond et un meilleur éclairage pourrait amennée du "réalisme" (j'avais un autre mot mais je l'es oublié).
 
-- [ ] 3. **Ajout d'armes**
+- [x] 3. **Ajout d'armes**
 Pour le moment il n'y as qu'un couteau mais je compte ajouté un fusil avec son interface (affichage des munitions, effets spéciaux lorsqu'on tire et qu'on touche), ensuite avec cela un système pour passer d'une arme à une autre et eventuellement une fonction qui permettrerais de donné un coup de couteau lorsqu'on est équippé du fusil.
 
 - [ ] 4. **Meilleurs ennemies**
 Les ennemies pour le moment sont statiques et ne se déplacent pas, cependant je compte les faire déplacer et se diriger vers le joueur et ainsi nous attaqué, cela amennera une bar de vie pour le joueur en suppléments.
 
-- [ ] 5. **Réparations des différends bugs et eventuelle optimisations**
+- [x] 5. **Réparations des différends bugs et eventuelle optimisations**
 Notamment le bug d'inversion de contrôles et celui du freeze.
 
 - [x]  6. **Ajouts de paramètres et meilleurs Menu**

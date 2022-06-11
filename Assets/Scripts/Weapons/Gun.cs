@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
@@ -8,6 +11,11 @@ public class Gun : MonoBehaviour
     private float fireRate = 10f;
     private float impactForce;
 
+    private int maxAmmo = 30;
+    private int currentAmmo;
+    private float reloadTime = 1.5f;
+    private bool isReloading = false;
+
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
     public AudioSource shoot;
@@ -15,9 +23,33 @@ public class Gun : MonoBehaviour
 
     private float nextTimeToFire = 0f;
 
+    public Animator anim;
+    public TextMeshProUGUI ammoDisplay;
+
+
+    void Start()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+    private void OnEnable()
+    {
+        isReloading = false;
+        anim.SetBool("Reloading", false);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (isReloading)
+            return;
+
+        if(currentAmmo <= 0 && this.gameObject.activeSelf || Input.GetButton("Reload") && this.gameObject.activeSelf)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
+
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f/fireRate;
@@ -25,20 +57,39 @@ public class Gun : MonoBehaviour
             range = Random.Range(1f, 100f);
             impactForce = Random.Range(1f, 30f);
 
-            Shoot();
+            if(Time.timeScale == 1)
+                Shoot();
         }
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        Debug.Log("Reload");
+
+        anim.SetBool("Reloading", true);
+
+        yield return new WaitForSeconds(reloadTime - .25f);
+        anim.SetBool("Reloading", false);
+        yield return new WaitForSeconds(.25f);
+
+        currentAmmo = maxAmmo;
+        ammoDisplay.text = 30 + " / " + maxAmmo.ToString();
+        isReloading = false;
     }
 
     void Shoot()
     {
         muzzleFlash.Play();
         shoot.Play();
+
+        currentAmmo--;
+        ammoDisplay.text = currentAmmo.ToString() + " / " + maxAmmo.ToString();
+
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
-
-            EnemyDamage target = hit.transform.GetComponent<EnemyDamage>();
+            Enemy target = hit.transform.GetComponent<Enemy>();
 
             if(target != null)
             {

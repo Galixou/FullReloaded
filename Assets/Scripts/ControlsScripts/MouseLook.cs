@@ -5,8 +5,8 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     private GameObject player;
-    private float minClamp = -45;
-    private float maxClamp = 45;
+    private float minClamp = -45f;
+    private float maxClamp = 45f;
     [HideInInspector]
     public Vector2 rotation;
     private Vector2 currentLookRot;
