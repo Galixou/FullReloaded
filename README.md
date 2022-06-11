@@ -57,7 +57,7 @@
 
 7. **(V2) Holster d'armes**
    - Il peut contenir autant d'arme que l'on souhaite et il fonctionne avec la molette de la souris
-   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder au fusil directement.
+   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder aux différentes armes directement.
 
 **(corrigé)**
 ~~**BUG**
