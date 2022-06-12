@@ -60,7 +60,7 @@
 
 7. **(V2) Holster d'armes**
    - Il peut contenir autant d'arme que l'on souhaite et il fonctionne avec la molette de la souris
-   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder au fusil directement.
+   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder aux différentes armes directement.
 
 8. **(V2) Barre de vie**
    - Une barre de vie est intégrée au jeu, elle est verte, puis jaune à partir de 40% et lorsqu'on atteind les 20% elle devient rouge
