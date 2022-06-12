@@ -83,7 +83,7 @@ Je me suis contenté de la base, c'est-à-dire le fond bleu et l'éclairage de b
 - [x] 3. **Ajout d'armes**
 Pour le moment il n'y as qu'un couteau mais je compte ajouté un fusil avec son interface (affichage des munitions, effets spéciaux lorsqu'on tire et qu'on touche), ensuite avec cela un système pour passer d'une arme à une autre et eventuellement une fonction qui permettrerais de donné un coup de couteau lorsqu'on est équippé du fusil.
 
-- [ ] 4. **Meilleurs ennemies**
+- [x] 4. **Meilleurs ennemies**
 Les ennemies pour le moment sont statiques et ne se déplacent pas, cependant je compte les faire déplacer et se diriger vers le joueur et ainsi nous attaqué, cela amennera une bar de vie pour le joueur en suppléments.
 
 - [x] 5. **Réparations des différends bugs et eventuelle optimisations**
