@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class MovementCharacter : MonoBehaviour
 {
-    private float speed = 2f;
-    private float jumpHeight = 4f;
+    public float speed = 2f;
+    public float speedBoost;
+    private float speedNormal;
+    public float jumpHeight = 4f;
 
     private float originalHeight;
 
     public Transform respawnPoint;
+
+    public ScoreManager scoreScript;
 
     Rigidbody rb;
     CapsuleCollider col;
@@ -23,6 +27,7 @@ public class MovementCharacter : MonoBehaviour
         col = GetComponent<CapsuleCollider>();
 
         originalHeight = col.height;
+        speedNormal = speed;
     }
 
     void Update()
@@ -47,18 +52,20 @@ public class MovementCharacter : MonoBehaviour
         // Système de sprint
         if (isGrounded && Input.GetButtonDown("Run"))
         {
-            speed = 7f;
+            speed += speedBoost;
         }
         else if (Input.GetButtonUp("Run"))
         {
-            speed = 2f;
+            speed = speedNormal;
         }
 
         // Système de réapparition
         if (rb.position.y <= -10)
         {
             transform.position = respawnPoint.position;
-            speed = 2f;
+            speed = speedNormal;
+            scoreScript.scoreText.text = "SCORE: " + 0;
+
         }
     }
 }

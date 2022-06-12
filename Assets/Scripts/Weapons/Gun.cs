@@ -44,7 +44,7 @@ public class Gun : MonoBehaviour
         if (isReloading)
             return;
 
-        if(currentAmmo <= 0 && this.gameObject.activeSelf || Input.GetButton("Reload") && this.gameObject.activeSelf)
+        if(currentAmmo <= 0 || Input.GetButton("Reload") && currentAmmo <= 29)
         {
             StartCoroutine(Reload());
             return;
@@ -65,7 +65,6 @@ public class Gun : MonoBehaviour
     IEnumerator Reload()
     {
         isReloading = true;
-        Debug.Log("Reload");
 
         anim.SetBool("Reloading", true);
 

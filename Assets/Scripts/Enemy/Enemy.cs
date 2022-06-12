@@ -1,7 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,59 +11,23 @@ public class Enemy : MonoBehaviour
 
     public int score = 100000;
 
-    public AudioSource Death;
     public AudioSource Melee;
+    public AudioSource Death;
 
-    public MeleeAttack scriptMelee;
-    public Gun         scriptGun;
+    MeleeAttack scriptMelee;
 
     public GameObject healthBarUI;
     public Slider slider;
 
-    public Animator anim;
-
-    public float lookRadius = 3f;
-
-    Transform target;
-    NavMeshAgent agent;
+    //Animator anim;
 
     private void Start()
     {
         health = maxHealth;
         slider.value = CalculateHealth();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
 
-        target = PlayerManager.instance.player.transform;
-        agent = GetComponent<NavMeshAgent>();
-    }
-
-    private void Update()
-    {
-        float distance = Vector3.Distance(target.position, transform.position);
-
-        if (distance <= lookRadius)
-        {
-            agent.SetDestination(target.position);
-
-            if (distance <= agent.stoppingDistance)
-            {
-                //Attack the target
-                FaceTarget();
-            }
-        }
-    }
-
-    void FaceTarget()
-    {
-        Vector3 direction = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
+        scriptMelee = FindObjectOfType<MeleeAttack>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,7 +35,7 @@ public class Enemy : MonoBehaviour
         if (other.tag == "Melee" && scriptMelee.anim.GetCurrentAnimatorStateInfo(0).IsTag("attack"))
         {
             Melee.Play();
-            anim.Play("EnemyHit");
+            //anim.Play("EnemyHit");
             health -= scriptMelee.degats;
 
             if(floatingTextPrefab && health > 0)
@@ -84,9 +48,7 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
-                Death.Play();
-                Destroy(gameObject);
-                ScoreManager.instance.Addpoint(score);
+                Die();
             }
         }
     }
@@ -94,7 +56,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        anim.Play("EnemyHit");
+        //anim.Play("EnemyHit");
 
         if (floatingTextPrefab && health > 0)
         {
@@ -106,9 +68,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Death.Play();
-            Destroy(gameObject);
-            ScoreManager.instance.Addpoint(score);
+            Die();
         }
     }
 
@@ -125,7 +85,15 @@ public class Enemy : MonoBehaviour
 
     void ShowFloatingTextGun()
     {
+        Gun scriptGun = FindObjectOfType<Gun>();
         var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
         go.GetComponent<TextMeshPro>().text = "-" + scriptGun.damage.ToString("F1");
+    }
+
+    void Die()
+    {
+        Death.Play();
+        Destroy(gameObject);
+        ScoreManager.instance.Addpoint(score);
     }
 }

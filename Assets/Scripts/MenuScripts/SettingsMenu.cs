@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -12,9 +13,9 @@ public class SettingsMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
-    public TMPro.TMP_Dropdown resolutionDropdown;
+    public TMP_Dropdown resolutionDropdown;
 
-    public TMPro.TMP_Dropdown qualityDropdown;
+    public TMP_Dropdown qualityDropdown;
 
     Resolution[] resolutions;
 
@@ -27,7 +28,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Awake()
     {
-        screenInt = PlayerPrefs.GetInt("togglestate");
+        screenInt = PlayerPrefs.GetInt("toggleState");
 
         if(screenInt == 1)
         {
@@ -105,11 +106,15 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen(bool isFullScreen)
     {
         if (isFullScreen == false)
+        {
             PlayerPrefs.SetInt("toggleState", 0);
+            Screen.fullScreen = isFullScreen;
+        }
         else
         {
             isFullScreen = true;
-            PlayerPrefs.SetInt("togglestate", 1);
+            PlayerPrefs.SetInt("toggleState", 1);
+            Screen.fullScreen = isFullScreen;
         }
     }
 }

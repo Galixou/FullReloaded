@@ -44,6 +44,9 @@
    - Une bar de vie indique combien il reste de vie à l'ennemi.
    - Une fois qu'il atteind 0 PV ou moins il disparait
    - Un son est émis lorsqu'on donne un coup et dès qu'il meurt
+   - (V2) Ils apparaisent via un spawner
+   - Ils poursuivent le joueur et tire une fois en face de celui-ci
+   - Leurs pistolets ont des valeurs aléatoires comme le fusil du joueur, cependant la distance de tir et les dégâts sont réduis (entre 1 et 5 PV par tir)
    - **~~Pour le moment la seul arme utilisable par le joueur pour tuer l'ennemi est un couteau~~**
 
 6. **(V2) Ajout d'un fusil**
@@ -52,12 +55,16 @@
      - des dégats entre 1 et 10PV
      - une portée entre 1 et 100
      - une puissance de force entre 1 et 30
-   - Il peut contenir 30 munitions et se recharge automatiquement, une touche "R" est assignée au rechargement si l'on souhaite rechargé en plein milieu de chargeur.
+   - Il peut contenir 30 munitions et se recharge automatiquement, une touche "R" est assignée au rechargement si l'on souhaite rechargé en plein milieu de chargeur (il faut utiliser une munition afin de recharger manuellement, le chargeur à 30 balles alors il en faut 29 pour appuyer sur R).
    - l'affichage des munitions actuelles est visible
 
 7. **(V2) Holster d'armes**
    - Il peut contenir autant d'arme que l'on souhaite et il fonctionne avec la molette de la souris
    - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder au fusil directement.
+
+8. **(V2) Barre de vie**
+   - Une barre de vie est intégrée au jeu, elle est verte, puis jaune à partir de 40% et lorsqu'on atteind les 20% elle devient rouge
+   - dans le même thème: un effet "touché" est appliqué au joueur lorsqu'il est touché par l'ennemi
 
 **(corrigé)**
 ~~**BUG**

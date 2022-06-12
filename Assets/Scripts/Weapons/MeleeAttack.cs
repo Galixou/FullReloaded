@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-
-    public Animator anim;
-
     [HideInInspector]
     public float degats;
+    [HideInInspector]
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
