@@ -21,11 +21,15 @@ public class FadeScript : MonoBehaviour
     {
         if (fadeOut)
         {
-            bloodImage.alpha -= Time.deltaTime;
-            if (bloodImage.alpha == 0)
+            if (bloodImage.alpha >= 0)
             {
-                fadeOut = false;
+                bloodImage.alpha -= Time.deltaTime;
+                if (bloodImage.alpha == 0)
+                {
+                    fadeOut = false;
+                }
             }
+
         }
     }
 }

@@ -5,7 +5,7 @@ public class HealthBarScript : MonoBehaviour
 {
     private Image healthBar;
     public float currentHealth;
-    private float maxHealth = 100f;
+    public float maxHealth = 100f;
     PlayerController player;
 
     // Start is called before the first frame update
@@ -21,6 +21,12 @@ public class HealthBarScript : MonoBehaviour
     {
         currentHealth = player.health;
         healthBar.fillAmount = currentHealth / maxHealth;
+
+        if (player.health < 0)
+            player.health = 0;
+
+        if (player.health > maxHealth)
+            player.health = maxHealth;
 
         if (healthBar.fillAmount < 0.2f)
             healthBar.color = Color.red;

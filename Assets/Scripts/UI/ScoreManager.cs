@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI highscoreText;
 
     public int score = 0;
-    int highScore = 0;
+    public int highScore = 0;
 
     private void Awake()
     {

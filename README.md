@@ -65,6 +65,7 @@
 8. **(V2) Barre de vie**
    - Une barre de vie est intégrée au jeu, elle est verte, puis jaune à partir de 40% et lorsqu'on atteind les 20% elle devient rouge
    - dans le même thème: un effet "touché" est appliqué au joueur lorsqu'il est touché par l'ennemi
+   - Des endroits pour regagner de la vie (entre 20 et 30 PV) sont sur la carte, ils apparaisent toute les 20 secondes.
 
 **(corrigé)**
 ~~**BUG**

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimedSpawn : MonoBehaviour
@@ -8,20 +6,25 @@ public class TimedSpawn : MonoBehaviour
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
+    PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
     }
 
     public void SpawnObject()
     {
-        Instantiate(spawnee, transform.position, transform.rotation);
-        if (stopSpawning)
+        if (player.health > 0)
         {
-            CancelInvoke("SpawnObject");
-        }
+            Instantiate(spawnee, transform.position, transform.rotation);
 
+            if (stopSpawning)
+            {
+                CancelInvoke("SpawnObject");
+            }
+        }
     }
 }
