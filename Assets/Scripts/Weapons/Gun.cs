@@ -9,7 +9,6 @@ public class Gun : MonoBehaviour
     public float damage;
     private float range;
     private float fireRate = 10f;
-    private float impactForce;
 
     private int maxAmmo = 30;
     private int currentAmmo;
@@ -53,9 +52,8 @@ public class Gun : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f/fireRate;
-            damage = Random.Range(1f, 10f);
-            range = Random.Range(1f, 100f);
-            impactForce = Random.Range(1f, 30f);
+            damage = Random.Range(5f, 20f);
+            range = Random.Range(30f, 100f);
 
             if(Time.timeScale == 1)
                 Shoot();
@@ -93,11 +91,6 @@ public class Gun : MonoBehaviour
             if(target != null)
             {
                 target.TakeDamage(damage);
-            }
-
-            if(hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));

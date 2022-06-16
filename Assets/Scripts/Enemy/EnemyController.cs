@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
         {
             agent.SetDestination(target.position);
 
-            if (distance <= agent.stoppingDistance && player.health > 0)
+            if (distance <= agent.stoppingDistance && player.health > 0f)
             {
                 FaceTarget();
                 

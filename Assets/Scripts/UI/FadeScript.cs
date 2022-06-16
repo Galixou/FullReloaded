@@ -29,7 +29,6 @@ public class FadeScript : MonoBehaviour
                     fadeOut = false;
                 }
             }
-
         }
     }
 }

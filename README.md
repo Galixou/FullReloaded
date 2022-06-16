@@ -52,9 +52,8 @@
 6. **(V2) Ajout d'un fusil**
    - Il est automatique
    - chaque tir ont:
-     - des dégats entre 1 et 10PV
-     - une portée entre 1 et 100
-     - une puissance de force entre 1 et 30
+     - des dégats entre 5 et 20PV
+     - une portée entre 30 et 100
    - Il peut contenir 30 munitions et se recharge automatiquement, une touche "R" est assignée au rechargement si l'on souhaite rechargé en plein milieu de chargeur (il faut utiliser une munition afin de recharger manuellement, le chargeur à 30 balles alors il en faut 29 pour appuyer sur R).
    - l'affichage des munitions actuelles est visible
 
