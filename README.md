@@ -1,4 +1,9 @@
-# Ceci n'est pas un jeu mais une démonstration technique
+# FullReloaded
+
+https://user-images.githubusercontent.com/68634636/174169496-16e1fdad-04ae-4d3d-83d8-072cda3e315d.mp4
+
+la vidéo est sur youtube, clique sur le lien suivant:
+https://youtu.be/d3KHO9GXfts
 
 **Ce README contient la liste des différentes fonctions possibles ainsi que le Roadmap (fonctions que j'envisage dans le futur)**
 *Note: Il se peut que j'emploi le terme "jeu" car cela me semble plus naturel*
