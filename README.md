@@ -1,6 +1,6 @@
 # FullReloaded
 
-https://user-images.githubusercontent.com/68634636/174169752-d84329d9-1dd7-4b42-884a-8cf40e62dcc5.mp4
+<https://user-images.githubusercontent.com/68634636/174169752-d84329d9-1dd7-4b42-884a-8cf40e62dcc5.mp4>
 
 la vidéo est sur YouTube, clique sur le lien suivant:
 [Gameplay V1 - FullReloaded](https://youtu.be/d3KHO9GXfts)
@@ -75,8 +75,11 @@ la vidéo est sur YouTube, clique sur le lien suivant:
    - dans le même thème: un effet "touché" est appliqué au joueur lorsqu'il est touché par l'ennemi
    - Des endroits pour regagner de la vie (entre 20 et 30 PV) sont sur la carte, ils apparaisent toute les 20 secondes.
 
-9. **(V1) Gameplay)**
+9. **(V1) Gameplay**
    - Ce sont des vagues, le nombre de départ est à 2 et l'on ajoute 2 autres a chaque vague, ils apparaisent a un taux de 1secondes et ce taux diminue de 0.1 entre chaque vague.
+
+10. **(V1) Minimap**
+    - Le jeu intègre une minimap static montrant l'emplacement du joueur (Fleche noir) sur la carte ainsi que celui des ennemies (Point rouge)
 
 **(corrigé)**
 ~~**BUG**
