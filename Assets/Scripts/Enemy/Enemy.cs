@@ -11,11 +11,6 @@ public class Enemy : MonoBehaviour
 
     public int score = 100000;
 
-    public AudioSource Melee;
-    public AudioSource Death;
-
-    MeleeAttack scriptMelee;
-
     public GameObject healthBarUI;
     public Slider slider;
 
@@ -25,38 +20,11 @@ public class Enemy : MonoBehaviour
     {
         health = maxHealth;
         slider.value = CalculateHealth();
-        //anim = GetComponent<Animator>();
-
-        scriptMelee = FindObjectOfType<MeleeAttack>();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Melee" && scriptMelee.anim.GetCurrentAnimatorStateInfo(0).IsTag("attack"))
-        {
-            Melee.Play();
-            //anim.Play("EnemyHit");
-            health -= scriptMelee.degats;
-
-            if(floatingTextPrefab && health > 0)
-            {
-                ShowFloatingTextMelee();
-            }
-
-            healthBarUI.SetActive(true);
-            slider.value = CalculateHealth();
-
-            if (health <= 0)
-            {
-                Die();
-            }
-        }
     }
 
     public void TakeDamage(float damage)
     {
         health -= damage;
-        //anim.Play("EnemyHit");
 
         if (floatingTextPrefab && health > 0)
         {
@@ -77,12 +45,6 @@ public class Enemy : MonoBehaviour
         return health / maxHealth;
     }
 
-    void ShowFloatingTextMelee()
-    {
-        var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMeshPro>().text = "-" + scriptMelee.degats.ToString("F1");
-    }
-
     void ShowFloatingTextGun()
     {
         Gun scriptGun = FindObjectOfType<Gun>();
@@ -92,7 +54,6 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Death.Play();
         Destroy(gameObject);
         ScoreManager.instance.Addpoint(score);
     }

@@ -5,14 +5,12 @@ public class SwitchWeapon : MonoBehaviour
 {
     public int selectedWeapon = 0;
     public Image machinegun;
-    public Image knife;
 
     // Start is called before the first frame update
     void Start()
     {
         SelectWeapon();
-        machinegun.enabled = false;
-        knife.enabled = true;
+        machinegun.enabled = true;
     }
 
     // Update is called once per frame
@@ -28,13 +26,11 @@ public class SwitchWeapon : MonoBehaviour
                 {
                     selectedWeapon = 0;
                     machinegun.enabled = false;
-                    knife.enabled = true;
                 }
                 else
                 {
                     selectedWeapon++;
                     machinegun.enabled = true;
-                    knife.enabled = false;
                 }
             }
 
@@ -44,28 +40,23 @@ public class SwitchWeapon : MonoBehaviour
                 {
                     selectedWeapon = transform.childCount - 1;
                     machinegun.enabled = true;
-                    knife.enabled = false;
                 }
                 else
                 {
                     selectedWeapon--;
                     machinegun.enabled = false;
-                    knife.enabled = true;
                 }
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 selectedWeapon = 0;
-                machinegun.enabled = false;
-                knife.enabled = true;
+                machinegun.enabled = true;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
             {
                 selectedWeapon = 1;
-                machinegun.enabled = true;
-                knife.enabled = false;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)

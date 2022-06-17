@@ -41,16 +41,18 @@ la vidéo est sur YouTube, clique sur le lien suivant:
    - Une musique pour le fond du jeu et une musique pour le menu d'accueil et celui de pause
    - les musique utilisés sont:
 
-   [Cartoon - On & On (feat. Daniel Levi) [NCS Release]](https://www.youtube.com/watch?v=K4DyBUG242c&ab_channel=NoCopyrightSounds) - Fond de jeu
+   [Alivvve & Sweeep - Last Night (Glo Remix)](https://www.youtube.com/watch?v=xnjpgqFYAGA&ab_channel=Fluidified) - Fond de jeu
 
-   [Egzod & Maestro Chives - Royalty (ft. Neoni) [NCS Release]](https://www.youtube.com/watch?v=C5fLxtJH2Qs&ab_channel=NoCopyrightSounds) - Menu Accueil et menu pause
+   [Michael FK - Go Back [Official Video]](https://www.youtube.com/watch?v=Y_aYjA83GUY&ab_channel=MichaelFK) - Menu Accueil et menu pause
+
+   - Les musiques ont été légérement modifié via un logiciel de musique, je compter composer les musiques moi-même mais ce n'est pas mon truc.
 
 5. **Ennemies**
    - Les ennemies ont 100 PV (Point de Vie)
-   - les coups de l'arme blanche varie entre 1 et 20 point de dégats sur l'ennemies, le nombre de dégâts est affichés au dessus de l'ennemi
-   - Une bar de vie indique combien il reste de vie à l'ennemi.
-   - Une fois qu'il atteind 0 PV ou moins il disparait
-   - Un son est émis lorsqu'on donne un coup et dès qu'il meurt
+   - ~~les coups de l'arme blanche varie entre 1 et 20 point de dégats sur l'ennemies~~ Le nombre de dégâts est affichés au dessus de l'ennemi
+   - Une bar de vie indique combien il reste de vie à l'ennemi
+   - Dès qu'il atteind 0 PV il disparait
+   - ~~Un son est émis lorsqu'on donne un coup et dès qu'il meurt~~
    - (V1) Ils apparaisent via un spawner
    - Ils poursuivent le joueur et tire une fois en face de celui-ci
    - Leurs pistolets ont des valeurs aléatoires comme le fusil du joueur, cependant la distance de tir et les dégâts sont réduis (entre 1 et 5 PV par tir)
@@ -66,12 +68,15 @@ la vidéo est sur YouTube, clique sur le lien suivant:
 
 7. **(V1) Holster d'armes**
    - Il peut contenir autant d'arme que l'on souhaite et il fonctionne avec la molette de la souris
-   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder aux différentes armes directement.
+   - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder aux différentes armes directement
 
 8. **(V1) Barre de vie**
    - Une barre de vie est intégrée au jeu, elle est verte, puis jaune à partir de 40% et lorsqu'on atteind les 20% elle devient rouge
    - dans le même thème: un effet "touché" est appliqué au joueur lorsqu'il est touché par l'ennemi
    - Des endroits pour regagner de la vie (entre 20 et 30 PV) sont sur la carte, ils apparaisent toute les 20 secondes.
+
+9. **(V1) Gameplay)**
+   - Ce sont des vagues, le nombre de départ est à 2 et l'on ajoute 2 autres a chaque vague, ils apparaisent a un taux de 1secondes et ce taux diminue de 0.1 entre chaque vague.
 
 **(corrigé)**
 ~~**BUG**
