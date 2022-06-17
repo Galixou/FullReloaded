@@ -79,7 +79,7 @@ la vidéo est sur YouTube, clique sur le lien suivant:
    - Ce sont des vagues, le nombre de départ est à 2 et l'on ajoute 2 autres a chaque vague, ils apparaisent a un taux de 1secondes et ce taux diminue de 0.1 entre chaque vague.
 
 10. **(V1) Minimap**
-    - Le jeu intègre une minimap static montrant l'emplacement du joueur (Fleche noir) sur la carte ainsi que celui des ennemies (Point rouge)
+    - Le jeu intègre une minimap statique montrant l'emplacement du joueur (Fleche noir) sur la carte ainsi que celui des ennemies (Point rouge)
 
 **(corrigé)**
 ~~**BUG**
