@@ -31,9 +31,11 @@ https://youtu.be/d3KHO9GXfts
 
    - Le menu pause:
      - Reprendre le jeu
-     - (V2) Contrôles
+     - (V1) Contrôles
+     - (V1) Paramètres
      - Accéder au menu
      - Quitter le jeu
+     - **Les paramètres sont maintenant accessibles depuis le menu pause**
 
 4. **Ajout de musique**
    - Une musique pour le fond du jeu et une musique pour le menu d'accueil et celui de pause
@@ -49,12 +51,12 @@ https://youtu.be/d3KHO9GXfts
    - Une bar de vie indique combien il reste de vie à l'ennemi.
    - Une fois qu'il atteind 0 PV ou moins il disparait
    - Un son est émis lorsqu'on donne un coup et dès qu'il meurt
-   - (V2) Ils apparaisent via un spawner
+   - (V1) Ils apparaisent via un spawner
    - Ils poursuivent le joueur et tire une fois en face de celui-ci
    - Leurs pistolets ont des valeurs aléatoires comme le fusil du joueur, cependant la distance de tir et les dégâts sont réduis (entre 1 et 5 PV par tir)
    - **~~Pour le moment la seul arme utilisable par le joueur pour tuer l'ennemi est un couteau~~**
 
-6. **(V2) Ajout d'un fusil**
+6. **(V1) Ajout d'un fusil**
    - Il est automatique
    - chaque tir ont:
      - des dégats entre 5 et 20PV
@@ -62,11 +64,11 @@ https://youtu.be/d3KHO9GXfts
    - Il peut contenir 30 munitions et se recharge automatiquement, une touche "R" est assignée au rechargement si l'on souhaite rechargé en plein milieu de chargeur (il faut utiliser une munition afin de recharger manuellement, le chargeur à 30 balles alors il en faut 29 pour appuyer sur R).
    - l'affichage des munitions actuelles est visible
 
-7. **(V2) Holster d'armes**
+7. **(V1) Holster d'armes**
    - Il peut contenir autant d'arme que l'on souhaite et il fonctionne avec la molette de la souris
    - Les touches 1,2,3,4 du clavier (celles du haut) peuvent accéder aux différentes armes directement.
 
-8. **(V2) Barre de vie**
+8. **(V1) Barre de vie**
    - Une barre de vie est intégrée au jeu, elle est verte, puis jaune à partir de 40% et lorsqu'on atteind les 20% elle devient rouge
    - dans le même thème: un effet "touché" est appliqué au joueur lorsqu'il est touché par l'ennemi
    - Des endroits pour regagner de la vie (entre 20 et 30 PV) sont sur la carte, ils apparaisent toute les 20 secondes.
