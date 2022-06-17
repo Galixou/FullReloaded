@@ -3,7 +3,7 @@
 https://user-images.githubusercontent.com/68634636/174169752-d84329d9-1dd7-4b42-884a-8cf40e62dcc5.mp4
 
 la vidéo est sur youtube, clique sur le lien suivant:
-https://youtu.be/d3KHO9GXfts
+[Gameplay V1 - FullReloaded](https://youtu.be/d3KHO9GXfts)
 
 **Ce README contient la liste des différentes fonctions possibles ainsi que le Roadmap (fonctions que j'envisage dans le futur)**
 *Note: Il se peut que j'emploi le terme "jeu" car cela me semble plus naturel*
