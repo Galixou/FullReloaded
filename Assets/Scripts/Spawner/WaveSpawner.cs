@@ -102,6 +102,12 @@ public class WaveSpawner : MonoBehaviour
         }
 
         spawnRate -= .1f;
+
+        if (spawnRate <= .1f)
+        {
+            spawnRate = .1f;
+        }
+
         enemyCount += 2;
         waveCount++;
 
