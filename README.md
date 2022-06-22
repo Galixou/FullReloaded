@@ -55,7 +55,7 @@ la vidéo est sur YouTube, clique sur le lien suivant:
    - ~~Un son est émis lorsqu'on donne un coup et dès qu'il meurt~~
    - (V1) Ils apparaisent via un spawner
    - Ils poursuivent le joueur et tire une fois en face de celui-ci
-   - Leurs pistolets ont des valeurs aléatoires comme le fusil du joueur, cependant la distance de tir et les dégâts sont réduis (entre 1 et 5 PV par tir)
+   - Leurs pistolets ont des valeurs aléatoires comme le fusil du joueur, cependant la distance de tir et les dégâts sont réduis (entre 3 et 5 PV par tir)
    - **~~Pour le moment la seul arme utilisable par le joueur pour tuer l'ennemi est un couteau~~**
 
 6. **(V1) Ajout d'un fusil**
