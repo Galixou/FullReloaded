@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 794497158619698139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.223, y: 0, z: 0.09}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4226438610358911410}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4737597295685732814}
   - component: {fileID: 1853118285175708141}
   - component: {fileID: 2392734460424201153}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2383054774558997183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.223, y: 0.069, z: 0.324}
+  m_LocalPosition: {x: -0.223, y: 0.1378, z: 0.519}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1037,7 +1037,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.004
+      value: 0.01
       mode: 0
       spread: 0
       speed:
@@ -5249,7 +5249,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 5.16e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.6927021e+22, y: 0, z: 0, w: 1048069}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -5354,8 +5354,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7845015456416611739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.527, y: 0, z: 0.483}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.407, y: 0.0386, z: 0.493}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 797971898198682855}
@@ -5378,7 +5378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   range: 0
-  impactForce: 0
   maxAmmo: 7
   currentAmmo: 0
   reloadTime: 2
@@ -5399,7 +5398,7 @@ GameObject:
   - component: {fileID: 6936351982720834215}
   - component: {fileID: 5925817278296623893}
   - component: {fileID: 7129601994692190758}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: MinimapMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5791,7 +5790,7 @@ Transform:
   m_GameObject: {fileID: 8540664107258611278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.30074, y: 0.50142, z: 0.2}
+  m_LocalScale: {x: 1, y: 2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3812620700588639098}
@@ -5951,7 +5950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a77f7509b641a334ba6ac8a33d84a290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 15
+  lookRadius: 100
   timeBetweenAttacks: 2
 --- !u!1 &8540664107402215192
 GameObject:

@@ -7,7 +7,6 @@ public class Pistol : MonoBehaviour
     [HideInInspector]
     public float damage;
     public float range;
-    public float impactForce;
 
     public int maxAmmo = 7;
     public int currentAmmo;
@@ -46,7 +45,6 @@ public class Pistol : MonoBehaviour
 
         if (currentAmmo <= 0)
         {
-            Debug.Log("Enemy Reloading");
             StartCoroutine(Reload());
             return;
         }
@@ -65,19 +63,10 @@ public class Pistol : MonoBehaviour
             {
                 target.health -= damage;
                 fade.Out();
-            } 
-
-            if (hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGO, 2f);
         }
     }
-}
-
-public class canvasGroup
-{
 }

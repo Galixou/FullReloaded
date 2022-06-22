@@ -53,7 +53,7 @@ public class Gun : MonoBehaviour
         {
             nextTimeToFire = Time.time + 1f/fireRate;
             damage = Random.Range(5f, 20f);
-            range = Random.Range(30f, 100f);
+            range = Random.Range(25f, 35f);
 
             if(Time.timeScale == 1)
                 Shoot();

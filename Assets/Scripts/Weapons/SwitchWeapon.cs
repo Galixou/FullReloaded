@@ -25,7 +25,7 @@ public class SwitchWeapon : MonoBehaviour
                 if (selectedWeapon >= transform.childCount - 1)
                 {
                     selectedWeapon = 0;
-                    machinegun.enabled = false;
+                    machinegun.enabled = true;
                 }
                 else
                 {
