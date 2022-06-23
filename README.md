@@ -79,7 +79,16 @@ la vidéo est sur YouTube, clique sur le lien suivant:
    - Ce sont des vagues, le nombre de départ est à 2 et l'on ajoute 2 autres a chaque vague, ils apparaisent a un taux de 1secondes et ce taux diminue de 0.1 entre chaque vague.
 
 10. **(V1) Minimap**
-    - Le jeu intègre une minimap statique montrant l'emplacement du joueur (Fleche noir) sur la carte ainsi que celui des ennemies (Point rouge)
+   - Le jeu intègre une minimap statique montrant l'emplacement du joueur (Fleche blanche) sur la carte ainsi que celui des ennemies (Point rouge) et les endroits où l'on peut récuperer de la vie sont marqués d'un point vert.
+
+11. **(V1) Ambiance**
+   - Ambiance de nuit avec peu de lumière, tentative d'immersion pure.
+
+12. **(V1) StoryTelling**
+   - c'est l'histoire d'un homme qui se fait retrouvé par la police encore une fois et cette fois-ci ils veulent le tuer alors il se protège contre eux et essaye de survivre (Scénario inspiré de la scène dans la forêt dans RAMBO (1982))
+
+13. **(V1) Map**
+   - Petit cottage en forêt isolé du monde entouré d'un cabanon délabré et d'un hangar, 2 maison à côté sont abandonnés, une dont la maison est détruite et une autre qui est en étât mais inhabités.
 
 **(corrigé)**
 ~~**BUG**
@@ -89,10 +98,10 @@ Lorsque le joueur décide de retourner au menu puis de refaire une partie il se 
 
 Pour le moment je me suis contenté de ça en guise de démo technique mais je verrais bien des améliorations eventuelles (tout dépendra de ma motivation), voici ma roadmap:
 
-- [ ] 1. **Extension du niveau**
+- [x] 1. **Extension du niveau**
 Le niveau est unique un carré entouré de mur en brique rouge avec une croix rouge en guise de respawn ainsi qu'une structure pour testé la fonction d'accroupissement. Je pense qu'une extension ne fera pas de mal avec + de structure pour embellir le décor.
 
-- [ ] 2. **Accentuation du fond de jeu**
+- [x] 2. **Accentuation du fond de jeu**
 Je me suis contenté de la base, c'est-à-dire le fond bleu et l'éclairage de base mais peut-être qu'un meilleur fond et un meilleur éclairage pourrait amennée du "réalisme" (j'avais un autre mot mais je l'es oublié).
 
 - [x] 3. **Ajout d'armes**

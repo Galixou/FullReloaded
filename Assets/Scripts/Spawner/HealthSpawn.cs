@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthSpawn : MonoBehaviour
 {
     public GameObject spawnee;
-    float timeToSpawn;
+    float timeToSpawn = 15f;
     float currentTimetoSpawn;
     float maxObjects = 1;
     [HideInInspector]
@@ -13,7 +13,6 @@ public class HealthSpawn : MonoBehaviour
 
     void Start()
     {
-        timeToSpawn = Random.Range(10f, 15f);
         currentTimetoSpawn = timeToSpawn;
     }
 
