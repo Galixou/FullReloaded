@@ -8,9 +8,10 @@ Saurez-vous survivre? Impossible. Good Death. Bye.
 
 https://user-images.githubusercontent.com/68634636/175368957-105dcb14-898f-454d-b5f6-208e1d98c3d2.mp4
 
-[Gameplay V1 Released - FullReloaded (Lien Youtube)]()
+[Gameplay V1 Released - FullReloaded (Lien Youtube)](https://youtu.be/jj666tTcylc)
 
 ## Disclaimer
 
 Tout code utilisé pour ma démonstration technique ne sont que des bouts de codes récupérés sur internet et sur des tutoriel Youtube.
+
 La plupart des "Assets", notamment fusils, maisons, végétations et décorations proviennent du Unity Asset Store. Ils sont créer par d'autres personnes.
