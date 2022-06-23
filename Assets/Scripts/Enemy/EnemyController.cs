@@ -41,7 +41,7 @@ public class EnemyController : MonoBehaviour
                 if(!alreadyAttacked)
                 {
                     pistol.damage = Random.Range(3f, 5f);
-                    pistol.range = Random.Range(7f, 70f);
+                    pistol.range = Random.Range(20f, 70f);
 
                     pistol.Shoot();
 
