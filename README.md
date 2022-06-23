@@ -8,7 +8,7 @@ Saurez-vous survivre? Impossible. Good Death. Bye.
 
 https://user-images.githubusercontent.com/68634636/175368957-105dcb14-898f-454d-b5f6-208e1d98c3d2.mp4
 
-[Gameplay V1 Released - FullReloaded]()
+[Gameplay V1 Released - FullReloaded (Lien Youtube)]()
 
 ## Disclaimer
 
