@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject holster;
     public GameObject pauseMenu;
     public GameObject uiScreen;
+    public GameObject crossHair;
     public GameObject deathScreen;
     Animator anim;
 
@@ -15,7 +16,6 @@ public class PlayerController : MonoBehaviour
 
     public CanvasGroup ui;
     bool fadeOut;
-
 
     [HideInInspector]
     public bool isDead = false;
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
             pauseMenu.SetActive(false);
             holster.SetActive(false);
+            crossHair.SetActive(false);
             character.enabled = false;
             mouse.enabled = false;
 

@@ -94,7 +94,18 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int i = 0; i < enemyCount; i++)
             {
-                Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+                Transform _sp;
+
+                if (waveCount < 10)
+                {
+                    _sp = spawnPoints[Random.Range(0, 4)];
+                }
+                else
+                {
+                    _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+                }
+
                 GameObject enemyClone = Instantiate(enemy, _sp.position, _sp.rotation);
 
                 yield return new WaitForSeconds(spawnRate);
